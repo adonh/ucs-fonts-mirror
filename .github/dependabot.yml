@@ -1,0 +1,29 @@
+version: 2
+
+updates:
+
+  - package-ecosystem: github-actions
+    directory: /
+    target-branch: main
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    cooldown:
+      default-days: 8
+    groups:
+      actions:
+        patterns:
+          - '*'
+
+  # GH does not yet support:
+  # - package-ecosystem: prek
+  #   directory: /
+  #   target-branch: main
+  #   schedule:
+  #     interval: daily
+  #   cooldown:
+  #     default-days: 13
+  #   groups:
+  #     pre-commit:
+  #       patterns:
+  #         - '*'

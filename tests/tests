@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd -- "$(dirname "${BASH_SOURCE[0]}")"
+for test in test-*; do
+  printf '= %s\n' "$test"
+  ./"$test"
+done

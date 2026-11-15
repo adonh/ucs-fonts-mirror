@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <title>{{ page.title | escape }}{% unless page.title == site.title %} - {{ site.title | escape }}{% endunless %}</title>
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header>
+      <a class="brand" href="{{ '/' | relative_url }}">UCS fonts mirror</a>
+      <nav aria-label="Primary">
+        <a href="{{ '/' | relative_url }}#downloads">Downloads</a>
+        <a href="{{ '/directory.html' | relative_url }}">File directory</a>
+        <a href="{{ '/attribution.html' | relative_url }}">Rights</a>
+      </nav>
+    </header>
+    <main id="content">{{ content }}</main>
+    <footer>
+      <p>Upstream: <a href="https://www.cl.cam.ac.uk/~mgk25/ucs-fonts.html">Markus Kuhn's Unicode fonts and tools for X11</a></p>
+      <p>Fonts and examples credited to their original authors; this mirror is independently maintained.</p>
+      {% if site.data.mirror %}
+        <p>Last mirrored: <time datetime="{{ site.data.mirror.mirrored_at }}">{{ site.data.mirror.mirrored_at }}</time></p>
+      {% endif %}
+    </footer>
+  </body>
+</html>

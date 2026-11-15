@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd -- "$(dirname "${BASH_SOURCE[0]}")"
+
+setup-prek__() {
+  local -r FORCE="${1-}"
+  local -r hook=.git/hooks/pre-commit
+  [[ -n $FORCE || ! -f ._done-setup-prek ]] || return 0
+  if [[ -n $FORCE ]] || ! command -v prek >/dev/null; then
+    uv tool install --upgrade prek
+  fi
+  if [[ ! -f $hook ]]; then
+    uv tool run prek install
+  elif [[ -n $FORCE ]] || grep -q ' by pre-commit' "$hook"; then
+    uv tool run prek install -f
+  fi
+  touch ._done-setup-prek
+}
+
+setup__() {
+  local -r FORCE="${1-}"
+  local -r QUIET="${2-}"
+  setup-prek__ "$FORCE"
+  [[ -n $QUIET ]] || printf '\nAll done!\n'
+}
+
+prek__() {
+  setup__ '' yes
+  uv tool run prek run --all-files --hook-stage manual "$@"
+}
+
+mirror__() {
+  setup__ '' yes
+  ./scripts/mirror.bash "$@"
+}
+
+tests__() {
+  setup__ '' yes
+  ./tests/tests "$@"
+}
+
+main__() {
+  local COMMANDS='mirror|prek|setup|tests'
+  local CMD="${1:-}"
+  if (($#)); then
+    shift
+  fi
+  if [[ "|$COMMANDS|" == *"|$CMD|"* ]]; then
+    "${CMD}__" "$@"
+  else
+    printf 'Usage: %s [%s] [arguments...]\n' "$0" "$COMMANDS">&2
+    return 2
+  fi
+}
+
+main__ "$@"

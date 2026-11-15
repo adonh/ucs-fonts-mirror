@@ -1,4 +1,6 @@
 * text=auto eol=lf
+docs/downloads/** -text
+docs/examples/** -text
 *.pdf binary
 *.bat eol=crlf
 *.cmd eol=crlf
