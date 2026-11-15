@@ -5,7 +5,7 @@ title: UCS fonts mirror
 
 # UCS fonts mirror
 
-**Upstream source:** <https://www.cl.cam.ac.uk/~mgk25/ucs-fonts.html>
+**Upstream source:** <https://www.cl.cam.ac.uk/~mgk25/ucs-fonts.html>{:target="_blank" rel="noopener noreferrer"}
 
 A preservation mirror of Markus Kuhn's Unicode bitmap fonts and tools for the
 X Window System, together with the accompanying text examples.
@@ -48,15 +48,15 @@ deliberately contains malformed byte sequences.
 Your browser may replace invalid bytes when displaying that file;
 download it to use the original test data.
 
-See the [upstream directory](https://www.cl.cam.ac.uk/~mgk25/ucs/examples/)
+See the [upstream directory](https://www.cl.cam.ac.uk/~mgk25/ucs/examples/){:target="_blank" rel="noopener noreferrer"}
 and [rights information](attribution.html) for original credits and terms.
 
 ## Further reading
 
 Markus Kuhn's original
-[font page](https://www.cl.cam.ac.uk/~mgk25/ucs-fonts.html),
-[Unicode FAQ](https://www.cl.cam.ac.uk/~mgk25/unicode.html), and
-[quotation-mark explanation](https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html)
+[font page](https://www.cl.cam.ac.uk/~mgk25/ucs-fonts.html){:target="_blank" rel="noopener noreferrer"},
+[Unicode FAQ](https://www.cl.cam.ac.uk/~mgk25/unicode.html){:target="_blank" rel="noopener noreferrer"}, and
+[quotation-mark explanation](https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html){:target="_blank" rel="noopener noreferrer"}
 provide historical background. Those articles are linked rather than reproduced.
 
 ## Integrity and rights

@@ -6,8 +6,8 @@ title: Attribution and rights
 # Attribution and rights
 
 This independent mirror preserves downloads from
-[Markus Kuhn's Unicode fonts page](https://www.cl.cam.ac.uk/~mgk25/ucs-fonts.html)
-and its [examples directory](https://www.cl.cam.ac.uk/~mgk25/ucs/examples/),
+[Markus Kuhn's Unicode fonts page](https://www.cl.cam.ac.uk/~mgk25/ucs-fonts.html){:target="_blank" rel="noopener noreferrer"}
+and its [examples directory](https://www.cl.cam.ac.uk/~mgk25/ucs/examples/){:target="_blank" rel="noopener noreferrer"},
 hosted by the University of Cambridge Computer Laboratory.
 It is not an official Cambridge or X.Org publication.
 The overview is newly written; the original articles are linked, not copied.
@@ -21,7 +21,7 @@ There is no blanket MIT license for the mirrored files.
 
 The text examples retain their original credits, including contributions by
 Markus Kuhn, Robert Brady, and Serge Winitzki.
-`UTF-8-test.txt` specifies [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/);
+`UTF-8-test.txt` specifies [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/){:target="_blank" rel="noopener noreferrer"};
 `UTF-8-demo.txt` specifies CC BY without a version.
 Other files retain their original notices; this mirror does not assign them a new license.
 [Source URLs](SOURCES.tsv) are recorded for every mirrored file, and the files are unmodified.
