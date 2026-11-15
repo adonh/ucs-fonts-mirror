@@ -1,0 +1,9 @@
+.DS_Store
+._*
+.ucs-fonts-mirror.*
+_site/
+.jekyll-cache/
+.jekyll-metadata
+*~
+*.swp
+*.bak
